@@ -1,0 +1,56 @@
+.hero {
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../../img/bg.svg");
+
+  @supports (height: 100cqh) {
+    height: 100cqh;
+  }
+
+  @supports (height: 100svh) {
+    height: 100svh;
+  }
+
+  @media screen and (max-height: 520px) and (max-width: 1100px) and (orientation: landscape) {
+    justify-content: flex-start;
+  }
+
+  &__img {
+    position: relative;
+    flex: 0 0 86vh;
+    align-self: flex-end;
+
+    max-width: 50%;
+    max-height: 90%;
+    right: 12rem;
+    bottom: -10rem;
+
+    z-index: 10;
+
+    @media screen and (max-width: 968px) {
+      max-width: 115rem;
+      bottom: 0;
+    }
+
+    @media screen and (max-width: 840px) {
+      right: 10vw;
+    }
+
+    @media screen and (max-width: 520px) {
+      max-width: 60vh;
+      right: 5vw;
+    }
+
+    @media screen and (max-height: 520px) and (max-width: 1100px) and (orientation: landscape) {
+      max-width: 90rem;
+      right: 3rem;
+    }
+
+    img,
+    picture {
+      width: 100%;
+    }
+  }
+}

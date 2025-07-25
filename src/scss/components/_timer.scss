@@ -1,0 +1,113 @@
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  scale: 0.7;
+  position: relative;
+  z-index: 5;
+
+  @media screen and (max-width: 968px) {
+    scale: 0.85;
+    gap: 9rem;
+    margin-bottom: -4rem;
+  }
+
+  @media screen and (max-width: 520px) {
+    scale: 0.8;
+  }
+
+  &__hours {
+    position: relative;
+  }
+
+  &__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+
+    div {
+      position: absolute;
+    }
+
+    svg {
+      position: relative;
+      transform: rotate(270deg);
+      width: 15rem;
+      height: 15rem;
+      scale: 2;
+
+      circle {
+        stroke: #6a6a6a;
+        stroke-width: 0.3rem;
+        stroke-linecap: round;
+        transform: translate(0.5rem, 0.5rem);
+        fill: #80808080;
+
+        &:nth-child(2) {
+          stroke-dasharray: 44rem;
+          stroke-dashoffset: 44rem;
+          position: absolute;
+          top: -0.8rem;
+          left: -1.9rem;
+          stroke: #1db970;
+          stroke-width: 0.7rem;
+          fill: transparent;
+        }
+      }
+    }
+  }
+
+  div {
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+    font-size: 3rem;
+
+    span:first-of-type {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: -2rem;
+      color: #fff;
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 13rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 70%; /* 9.0899rem */
+      text-transform: uppercase;
+
+      @media screen and (max-width: 520px) {
+        font-size: 15rem;
+      }
+    }
+
+    span:nth-of-type(2) {
+      position: absolute;
+      top: 6.5rem;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 2.8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 70%; /* 1.9319rem */
+      text-transform: uppercase;
+
+      @media screen and (max-width: 520px) {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+.no-animation {
+  transition: none;
+  animation: none;
+}
+
+.animate-timer {
+  transition: all 1s linear;
+}

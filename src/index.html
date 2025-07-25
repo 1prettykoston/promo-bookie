@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html',{ "title":"Марафонбет" })
+
+  <body>
+    <div class="container">
+      <aside class="aside">
+        <div class="aside__logo"></div>
+        <div class="aside__separate-line"></div>
+      </aside>
+
+      <main>
+        <section class="hero">
+          <div class="hero__img">
+            <img src="./img/hero.png" alt="marathon hero" />
+          </div>
+
+          <div class="cta">
+            <div class="cta__desc">
+              <a href="#!" class="cta__banner">
+                <span>приветственный бонус</span>
+                <span>до 6 000₽</span>
+              </a>
+
+              <p>Торопись,акция закончится через</p>
+            </div>
+
+            <div class="timer">
+              <div class="timer__hours-container">
+                <div class="timer__circle">
+                  <svg>
+                    <circle cx="48%" cy="48%" r="46%"></circle>
+                    <circle cx="48%" cy="48%" r="46%" id="hh"></circle>
+                  </svg>
+                  <div>
+                    <span id="hours"></span>
+                    <span>часа</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timer__colon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="8rem" viewBox="0 0 30 88" fill="none">
+                  <circle cx="15.1926" cy="15.6897" r="14.8117" fill="#1DB970" fill-opacity="0.8" />
+                  <circle cx="15.1926" cy="73.085" r="14.8117" fill="#1DB970" fill-opacity="0.8" />
+                </svg>
+              </div>
+
+              <div class="timer__minutes-container">
+                <div class="timer__circle">
+                  <svg>
+                    <circle cx="48%" cy="48%" r="46%"></circle>
+                    <circle cx="48%" cy="48%" r="46%" id="mm"></circle>
+                  </svg>
+                  <div>
+                    <span id="minutes"></span>
+                    <span>минут</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timer__colon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="8rem" viewBox="0 0 30 88" fill="none">
+                  <circle cx="15.1926" cy="15.6897" r="14.8117" fill="#1DB970" fill-opacity="0.8" />
+                  <circle cx="15.1926" cy="73.085" r="14.8117" fill="#1DB970" fill-opacity="0.8" />
+                </svg>
+              </div>
+              <div class="timer__seconds-container">
+                <div class="timer__circle">
+                  <svg>
+                    <circle cx="48%" cy="48%" r="46%"></circle>
+                    <circle cx="48%" cy="48%" r="46%" id="ss" class="no-animation"></circle>
+                  </svg>
+                  <div>
+                    <span id="seconds"></span>
+                    <span>секунд</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a class="cta__link" href="#!">Забрать</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

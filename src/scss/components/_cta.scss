@@ -1,0 +1,120 @@
+.cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 8rem;
+  right: 28rem;
+  padding: 5.5rem 10rem 7rem 1rem;
+
+  @media screen and (max-width: 968px) {
+    position: absolute;
+    z-index: 10;
+    padding: 2rem 2rem 12rem 2rem;
+    gap: 10rem;
+    bottom: 0;
+    right: 0;
+  }
+
+  @media screen and (max-width: 520px) {
+    bottom: 0;
+    right: 4rem;
+    gap: 13rem;
+  }
+
+  @media screen and (max-height: 520px) and (max-width: 1100px) and (orientation: landscape) {
+    right: 10rem;
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-5deg);
+    position: relative;
+    z-index: 5;
+
+    p {
+      color: #0e2344;
+      text-align: center;
+      font-family: Helvetica;
+      font-size: 3.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 968px) {
+        color: #ffffff;
+      }
+
+      @media screen and (max-width: 520px) {
+        font-size: 3.8rem;
+      }
+
+      @media screen and (max-height: 520px) and (max-width: 1100px) and (orientation: landscape) {
+        color: #0e2344;
+      }
+    }
+  }
+
+  &__banner {
+    display: block;
+    padding: 3rem 6rem;
+    height: 100%;
+    width: 100%;
+    background-color: #0e2344;
+    margin-bottom: 4rem;
+
+    @media screen and (max-width: 520px) {
+      padding: 4rem 6rem;
+    }
+
+    span {
+      display: block;
+      color: #fff;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      max-width: 80vh;
+      font-size: 4.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 520px) {
+        font-size: 6rem;
+      }
+
+      &:nth-of-type(2) {
+        color: #cb2129;
+        font-size: 7rem;
+
+        @media screen and (max-width: 520px) {
+          font-size: 9rem;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    padding: .7rem 5.8rem 2rem 5.8rem;
+    border-radius: 0.7rem;
+    background: #cb2129;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    color: #fff;
+    font-size: 15rem;
+    font-weight: 900;
+    line-height: .8;
+    font-variant: all-small-caps;
+    letter-spacing: 2rem;
+
+    z-index: 5;
+
+    @media screen and (max-width: 520px) {
+      font-size: 18rem;
+      letter-spacing: 1rem;
+    }
+  }
+}
